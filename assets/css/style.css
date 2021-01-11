@@ -456,3 +456,11 @@ template {
 [hidden] {
   display: none;
 }
+
+
+/*наш код здесь*/
+
+* {
+  box-sizing: border-box;
+}
+
