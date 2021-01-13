@@ -474,9 +474,11 @@ html {
 
 h1 {
   font-size: 3.75rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
   font-weight: 300;
   font-family: "Roboto Slab", serif;
+  text-align: center;
 }
 
 a {
@@ -493,6 +495,11 @@ a {
   height: 60px;
   min-width: 250px;
   text-align: center;
+  transition: background-color 0.5s;
+}
+
+.btn:hover {
+  background-color: #d66926;
 }
 
 .header {
@@ -542,7 +549,7 @@ a {
 
 .header-logo {
   font-size: 1.5rem;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.22em;
 }
 
 .header-logo__link {
@@ -553,8 +560,8 @@ a {
 .header-logo__accent {
   display: inline-block;
   border: 3px solid #d53d27;
-  padding: 15px 5px;
-  margin-right: 5px;
+  padding: 14px 1px 13px 4px;
+  margin-right: 4px;
 }
 
 
@@ -571,7 +578,7 @@ a {
 .header-navbar__list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 -10px 0 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
   justify-content: end;
@@ -584,7 +591,13 @@ a {
 
 .header-navbar__link {
   display: block;
-  padding: 20px;
+  padding: 20px 10px;
+  font-size: 1.125rem;
+  transition: color 0.5s;
+}
+
+.header-navbar__link:hover {
+  color: #d66926;
 }
 
 .header-content {
@@ -593,7 +606,7 @@ a {
 }
 
 .header-content__title {
-  margin: 0 0 51px;
+  margin: 0 0 53px;
 }
 
 .header-content__buttons {
