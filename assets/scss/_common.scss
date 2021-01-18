@@ -5,49 +5,84 @@
 html {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
-  color: #637588;
+  color: $color-gray;
   overflow-y: scroll;
   letter-spacing: 0.1em;
 }
 
 h1 {
-  font-size: 3.75rem;
   letter-spacing: 0.08em;
   line-height: 1.2;
   font-weight: 300;
   font-family: "Roboto Slab", serif;
   text-align: center;
+
+  @include lg-min {
+    font-size: 3.75rem;
+  }
+;
+
+  @include lg-md {
+    font-size: 2.5rem;
+  }
+;
+
+  @include lg {
+    font-size: 1.875rem;
+  }
+;
 }
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: $color-light;
 }
 
 .btn {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid #ffffff;
-  min-width: 250px;
-}
-
-.btn-accent {
-  background-color: rgba(45, 54, 81, 0.8); /* #2d3651 */
-  border: 2px solid #2d3651;
-  min-width: 350px;
-}
-
-.btn,
-.btn-accent {
-  font-size: 1.125rem;
   display: block;
-  padding: 18px 20px;
-  height: 60px;
   text-align: center;
   transition: background-color 0.5s;
 
   &:focus,
   &:hover {
-    background-color: #d66926;
+    background-color: $color-accent;
   }
 }
 
+
+.btn--light {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid $color-light;
+
+  @include lg-min {
+    font-size: 1.125rem;
+    min-width: 250px;
+    padding: 18px $gap;
+    height: 60px;
+  }
+  @include lg-md {
+    min-width: 200px;
+    padding: 14px $gap;
+    height: 50px;
+  }
+  @include md {
+    min-width: 170px;
+    padding: 9px $gap;
+    height: 40px;
+  }
+}
+
+.btn--primary {
+  font-size: 1.125rem;
+  background-color: rgba($color-primary, 0.8);
+  border: 2px solid $color-primary;
+  padding: 18px $gap;
+  height: 60px;
+
+  @include sm-min {
+    min-width: 350px;
+  }
+  @include sm {
+    width: 100%;
+  }
+}

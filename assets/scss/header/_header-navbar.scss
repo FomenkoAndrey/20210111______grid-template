@@ -10,7 +10,7 @@
   &__list {
     list-style: none;
     padding: 0;
-    margin: 0 -10px 0 0;
+    margin: 0 (-$gap / 2) 0 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
     justify-content: end;
@@ -18,18 +18,18 @@
   }
 
   &__item {
-    margin-left: 20px;
+    margin-left: $gap;
   }
 
   &__link {
     display: block;
-    padding: 20px 10px;
+    padding: $gap ($gap / 2);
     font-size: 1.125rem;
     transition: color 0.5s;
 
     &:hover,
     &:focus {
-      color: #d66926;
+      color: $color-accent;
     }
   }
 }
